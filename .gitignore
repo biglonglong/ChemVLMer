@@ -1,2 +1,5 @@
+.vscode
 .venv
 .env
+data/
+temp.py
