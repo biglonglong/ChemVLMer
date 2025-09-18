@@ -8,9 +8,9 @@ if not cap.isOpened():
 
 ret, frame = cap.read()
 if ret:
-    cv2.imshow("Captured Image", frame)
     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-    # cv2.imwrite("captured_image.jpg", frame)
+    cv2.imshow("Captured Image", frame_rgb)
+    cv2.imwrite("./data/captured_image.jpg", frame_rgb)
     cv2.waitKey(0)
     print("图像已捕获")
 else:
